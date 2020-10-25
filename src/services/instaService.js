@@ -16,5 +16,18 @@ export default class InstaService {
     getAllPosts = async () => {
         return await this.getResource("/posts");
     }
+
+    getAllPhotos = async () => {
+        const response = await this.getResource("/posts");
+        return response.map(this._transformPosts);
+    }
+
+    // Example of transforming an object in case for a large amount of data props.
+    _transformPosts = (post) => {
+        return {
+            src: post.src,
+            alt: post.alt
+        }
+    }
 }
 

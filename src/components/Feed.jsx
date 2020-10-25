@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg';
 import Posts from './Posts';
 import Users from './Users';
 
