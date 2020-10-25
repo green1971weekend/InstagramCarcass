@@ -1,22 +1,23 @@
 import React from 'react';
 import logo from '../logo.svg';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
     render() {
         return (
             <header>
                 <div className="container h-flex">
-                    <a href="#" className="logo">
+                    <Link to="/" className="logo">
                         <img src={logo} alt="logo"/>
-                    </a>
+                    </Link>
                     <nav className="links">
                         <ul>
                             <li>
-                                <a href="#" className="menu__links">Content</a>
+                                <Link to="/" className="menu__links">Content</Link>
                             </li>
                             <li>
-                                <a href="#" className="menu__links">Profile</a>
+                                <Link to="/profile" className="menu__links">Profile</Link>
                             </li>
                         </ul>
                     </nav>
