@@ -1,8 +1,17 @@
 import React from 'react';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
+import Posts from './Posts';
+import Users from './User';
 
-class Feed extends React.Component {
-    
+
+const Feed = () => {
+
+    return (
+        <div className="container feed">
+            <Posts />
+            <Users />
+        </div>
+    );
 }
 
 
